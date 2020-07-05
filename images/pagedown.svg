@@ -1,0 +1,11 @@
+<svg id="レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" width="12" height="90" viewBox="0 0 12 90">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>pagedown</title>
+  <path class="cls-1" d="M8,2A2,2,0,1,0,5.75,3.97461V90h.5V3.97461A1.99333,1.99333,0,0,0,8,2Z"/>
+</svg>

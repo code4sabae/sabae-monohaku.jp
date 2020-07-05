@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#access img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+}
+
+
+/* #access_con
+----------------------------------------- */
+
+#access_con {
+	padding-top: 40px;
+}
+
+#access_con h3 {
+	display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#access_con .txt_wrap {
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+	text-align: center;
+    margin-top: 25px;
+}
+
+#access_con .img_wrap {
+    background: #FFFFFF;
+    border-radius: 0 0 16px 0;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#access_con .access_map {
+   margin-top: 45px;
+    flex-wrap: wrap;
+}
+#access_con .access_map > li {
+    width: 100%;
+}
+#access_con .access_map > li:first-child {
+    height: 460px;
+}
+#access_con .access_map > li:first-child iframe {
+    width: 100%;
+    height: 100%;
+}
+#access_con .access_map > li:last-child {
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#access_con .access_info {
+    justify-content: flex-start;
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+}
+#access_con .access_info.bas {
+    margin-bottom: 0px;
+}
+#access_con .access_info h4 {
+    font-weight: bold;
+}
+#access_con .access_info > li:first-child {
+    margin-right: 25px;
+}
+
+#access_con .access_info > li:first-child img {
+    width: 45px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #access_con {
+	padding-top: 30px;
+}
+    #access_con .img_wrap {
+    background: #FFFFFF;
+    border-radius: 0 0 8px 0;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+    #access_con .access_map > li {
+    width: 100%;
+    height: auto;
+}
+    #access_con .access_map > li:first-child {
+    height: 300px;
+}
+    #access_con .access_map > li:last-child {
+    padding: 20px 0 20px 0;
+}
+    #access_con .access_info {
+        width: 90%;
+        font-size: 1.4rem;
+    margin: 0 auto 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    
+    #access_con .access_info > li:first-child {
+        width: -webkit-calc(45 / 375 * 100%);
+        width: calc(45 / 375 * 100%);
+        margin-right: 0px;
+}
+    #access_con .access_info > li:last-child {
+        width: -webkit-calc(310 / 375 * 100%);
+        width: calc(310 / 375 * 100%);
+}
+    
+    #access_con .access_info > li:first-child img {
+    width: 100%;
+}
+
+}

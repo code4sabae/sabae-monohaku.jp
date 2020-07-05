@@ -1,0 +1,506 @@
+/* #contact
+----------------------------------------- */
+
+#contact .blu {
+  color: #ff6f55;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+/* #tel_contact
+----------------------------------------- */
+#tel_contact {
+    margin-top: 100px;
+}
+
+#tel_contact .inner {
+    max-width: 650px;
+}
+
+#tel_contact h2 {
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    letter-spacing: 0.125em;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#tel_contact .tel_no {
+    font-size: 3.0rem;
+    letter-spacing: 0.125em;
+}
+
+#tel_contact .tel_info {
+    letter-spacing: 0.125em;
+}
+
+#tel_contact .tel_info span {
+    font-size: 1.2rem;
+}
+
+#tel_contact .txt_wrap {
+    margin-top: 40px;
+    letter-spacing: 0.02em;
+}
+
+
+@media screen and (max-width: 768px) {
+    #tel_contact {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+    #tel_contact h2 {
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.0rem;
+    letter-spacing: 0.125em;
+    margin: auto;
+    margin-bottom: 20px;
+}
+  #tel_contact .tel_no {
+    font-size: 2.5rem;
+      margin-bottom: 0px;
+}
+    #tel_contact .tel_info {
+    font-size: 1.3rem;
+}
+}
+
+
+/* #mail_contact
+----------------------------------------- */
+
+#mail_contact {
+    margin-top: 70px;
+}
+
+#mail_contact .inner {
+    max-width: 650px;
+}
+
+#mail_contact h2 {
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    letter-spacing: 0.125em;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#mail_contact {
+    margin-bottom: 40px !important;
+}
+
+#mail_contact .mail_info {
+    font-size: 1.5rem;
+}
+
+#mail_contact .mail_info b {
+    color: #ff6f55;
+    font-weight: normal;
+}
+
+#mail_contact .mailform_wrap {
+    margin-top: 60px;
+}
+
+#mail_contact .mailform_wrap .mailform_con {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(odd) {
+    width: 230px;
+    max-width: 100%;
+    color: #333333;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(odd) .sub {
+	font-size: 1.4rem;
+    display: block;
+    padding-left: 1em;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) {
+    width: calc(100% - 230px) ;
+    font-size: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) > span.horizontal-item {
+    display: block;
+    width: 40%;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) input {
+    height: 40px;
+    outline: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    border: none;
+    background: #FFFFFF;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) textarea {
+    outline: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    border: none;
+    background: #FFFFFF;
+}
+
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) .con_txt {
+    width: 100%;
+    max-width: 610px;
+    border: none;
+    height: 33px;
+        background: #FFFFFF;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) .con_addr,
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) .con_ques {
+    width: 100%;
+    max-width: 100% !important;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) .con_addr {
+    height: 33px;
+}
+
+#mail_contact .pp_wrap {
+    position: relative;
+	margin-top: 60px;
+    padding: 35px 0 35px 50px;
+    background: #FFFFFF;
+    border: none;
+	width: 100%;
+    height: 370px;
+}
+
+#mail_contact .privacy_policy {
+    padding-right: 45px;
+	height: calc(370px - 70px);
+    overflow: auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*#mail_contact .privacy_policy::after {
+  display: block;
+    position: absolute;
+    z-index: 2;
+  width: calc(100% - 2px) ;
+  height: 35px;
+  content: '';
+    background: #FFFFFF;
+  bottom: 1px;
+    left: 1px;
+}*/
+
+#mail_contact .privacy_policy .child {
+    display: inline-block;
+}
+
+#mail_contact .privacy_policy h3 {
+    font-size: 2.0rem;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+#mail_contact .privacy_policy h4 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: normal;
+}
+#mail_contact .privacy_policy p {
+    font-size: 1.4rem;
+}
+
+
+#mail_contact .agree {
+    margin-top: 30px;
+}
+
+#mail_contact .agree .mwform-checkbox-field-text {
+    text-decoration: underline;
+}
+
+
+#mail_contact .btn_wrap {
+    margin: 40px auto 0;
+    position: relative;
+    height: 30px;
+    width: 100%;
+    max-width: 230px;
+}
+
+#mail_contact .btn_wrap .submit_btn {
+    cursor:pointer;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    background: #fff000;
+    border-radius: 0;
+	border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    font-size: 1.4rem;
+    letter-spacing: 0.125em;
+    line-height: 1;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+#mail_contact .btn_wrap .submit_btn:hover {
+    opacity: 1;
+    color: #000000;
+    background: #18B7CD;
+}
+
+.con_type{
+  display: none;
+}
+
+.mwform-radio-field-text{
+  padding-left: 25px;
+  position:relative;
+  margin-right: 20px;
+   padding-top: 0.0em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.mwform-radio-field-text::before{
+    content: "";
+    display: block;
+    position: absolute;
+    /*background: #ffffff;*/
+    top: 0px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #18B7CD;
+    border-radius: 50%;
+    z-index: 2;
+}
+.con_type:checked + .mwform-radio-field-text::after{
+  content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background: #18B7CD;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.con_type:checked + .mwform-radio-field-text::before{
+    border: 2px solid #18B7CD;
+    background: none;
+}
+
+#contact .mw_wp_form .horizontal-item + .horizontal-item {
+    margin-left: 0px !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    #mail_contact {
+    margin-bottom: 0px !important;
+}
+    #mail_contact h2 {
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.0rem;
+    letter-spacing: 0.125em;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+    #mail_contact .mail_info {
+    font-size: 1.3rem;
+        text-align: left;
+}
+    #mail_contact .mailform_wrap {
+    padding: 15px 0 0;
+    margin-top: 30px;
+}
+    #mail_contact .mailform_wrap .mailform_con {
+    display: block;
+    margin-bottom: 20px;
+}
+    #mail_contact .mailform_wrap .mailform_con li:nth-child(odd) {
+    width: 100%;
+	font-size: 1.3rem;
+    line-height: 1.384615384615385;
+    margin-bottom: 10px;
+}
+
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) {
+    width: 100%;
+}
+    
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) .mwform-radio-field {
+    display: block;
+}
+    
+    #mail_contact .privacy_policy h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+#mail_contact .privacy_policy h4 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+    #mail_contact .privacy_policy p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+	
+	#mail_contact .pp_wrap {
+    position: relative;
+	margin-top: 20px;
+    padding: 20px 0 20px 15px;
+    background: #FFFFFF;
+    border: 1px solid #212121;
+    width: 100%;
+    height: 250px;
+}
+	
+    #mail_contact .privacy_policy {
+	padding-right: 10px;
+	height: calc(250px - 40px);
+    overflow: auto;
+    text-align: left;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+    #mail_contact .agree {
+    margin-top: 20px;
+        font-size: 1.3rem;
+		letter-spacing: 0;
+}
+    #mail_contact .agree .mwform-checkbox-field input {
+    -webkit-appearance: checkbox;
+	margin-right: 0px !important;
+}
+
+#mail_contact .btn_wrap .submit_btn {
+    cursor:pointer;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    background: #fff000;
+    border: 1px solid #fff000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-appearance: none;
+}
+
+#mail_contact .btn_wrap .submit_btn:hover {
+    opacity: 1;
+    color: #000000;
+    background: #18B7CD;
+}
+    
+    #mail_contact .btn_wrap {
+    margin: 40px auto 0;
+    max-width: 100%;
+    height: 40px;
+}
+    
+    .mwform-radio-field-text{
+  padding-top: 0.08em;
+}
+    #mail_contact .mailform_wrap .mailform_con li:nth-child(even) textarea {
+    height: 200px;
+}
+    
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+#mail_contact .mailform_wrap .mailform_con li:nth-child(even) > span.horizontal-item {
+    display: block;
+    width: 50%;
+}
+}
+
+
+
+/* #complete_wrap
+----------------------------------------- */
+
+#complete_wrap {
+    margin-top: 100px;
+}
+
+#complete_wrap .complete_txt {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    #complete_wrap {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+}
