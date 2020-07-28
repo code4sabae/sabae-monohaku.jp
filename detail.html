@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<title>さばえものづくり博覧会</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #header, #footer {
+    width: 100vw;
+  }
+  #main > div {
+    margin: 3em;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  #detail {
+    width: 80vw;
+  }
+  #detail_text {
+    text-align: left;
+  }
+  #company {
+    text-align: left;
+    width: 80vw;
+    padding: 2em;
+    background-color: #f1f1f1;
+  }
+  #info {
+    border-bottom: 1px solid #333;
+  }
+  #info_access::before {
+    content: "ACCESS";
+    width: 7em;
+    display: inline-block;
+  }
+  #info_url::before {
+    content: "URL";
+    width: 7em;
+    display: inline-block;
+  }
+  #info_sdgs::before {
+    content: "SDGs";
+    width: 7em;
+    display: inline-block;
+  }
+  #info_type::before {
+    content: "TYPE";
+    width: 7em;
+    display: inline-block;
+  }
+  #info_rest::before {
+    content: "REST";
+    width: 7em;
+    display: inline-block;
+  }
+  </style>
+  <script type="module">
+    import util from "https://taisukef.github.io/util/util.mjs";
+
+    window.onload = async () => {
+      if (document.location.hash.length < 1)
+        return;
+      
+      const id = document.location.hash.substring(1);
+      const url = `https://push.sabae.cc/${id}.csv`;
+      const data = await util.fetchCSVtoJSON(url);
+      const d = data[0];
+
+      console.log(d);
+      detail_text.textContent = d.会社説明;
+      detail_title.textConent = info_title.textContent = d.事業所名;
+      info_access.textContent = d.住所;
+      info_tel.textContent = d.電話番号;
+      info_fax.textContent = d.FAX番号;
+      info_url.textContent = d.URL;
+      info_sdgs.textContent = d.SDGs;
+      info_rest.textContent = d.定休日;
+      info_type.textContent = d.業種;
+    };
+  </script>
+</head>
+<body>
+  <img id="header" src="header.png">
+  
+  <div id="main">
+    <div>
+      <h3 id=detail_title></h3>
+    </div>
+    <img id=detail src="img_detail_test.jpg">
+    <div id=detail_text>
+    </div>
+
+    <div id=company>
+      <div id=info>INFORMATION</div>
+      <h3 id=info_title></h3>
+      <div id=info_access></div>
+      <div id=info_tel></div>
+      <div id=info_fax></div>
+      <div id=info_url></div>
+      <div id=info_sdgs></div>
+      <div id=info_rest></div>
+      <div id=info_type></div>
+  </div>
+
+  <img id="footer" src="footer.png">
+</body>
+</html>
