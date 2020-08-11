@@ -1,0 +1,124 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+#header {
+  background-image: url("img/main_bg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  height: 40vw;
+  max-height: 350px;
+}
+#btn_greeting {
+  position: absolute;
+  right: .5em;
+  top: 15vw;
+  width: 10vw;
+  animation-name: fuwafuwa;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+@keyframes fuwafuwa {
+  0% {
+      transform: translate(0,0px);
+  }
+  100% {
+      transform: translate(0,-15px)
+  }
+}
+#main_logo {
+  margin-top: 5vw;
+  max-width: 80vw;
+}
+#main_menu {
+  margin: 0;
+}
+#main_menu > li {
+  display: inline-block;
+  margin: .5em;
+  color: white;
+}
+#main_menu img {
+  height: .75em;
+}
+#header a {
+  color: white !important;
+}
+/* footer */
+#footer {
+  background-color: #55B4CA;
+  font-family: sans-serif;
+  margin-top: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  color: white;
+}
+#footer_logo {
+  margin: 1em;
+}
+#footer_fb {
+  display: block;
+  margin: 1em;
+}
+#footer a {
+  color: white !important;
+}
+#btn_pagetop {
+  position: absolute;
+  right: 1em;
+  width: 8vw;
+}
+
+/* main */
+#main > div {
+  margin: 1.5em 3em;
+}
+#main > div > h3::before, #main > div > h3::after {
+  border-top: 1px solid #444;
+  display: inline-block;
+  position: relative;
+  top: -.3em;
+  margin-right: 1em;
+  margin-left: 1em;
+  content: "";
+  width: 3em;
+}
+#tags > a {
+  background-color: #f1f1f1;
+  padding: .1em .3em;
+  margin: .5em;
+  line-height: 1.8em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#div_search {
+  line-height: 2em;
+}
+#div_search_box {
+  vertical-align: top;
+}
+#input_search {
+  border: 1px solid black;
+  font-size: 120%;
+}
+#btn_search {
+  width: 2.5em;
+  height: 2em;
+  background-image: url("img/serchiicon.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  border: none;
+  position: relative;
+  top: .4em;
+  margin-left: 1em;
+}

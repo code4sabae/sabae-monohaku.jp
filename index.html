@@ -1,61 +1,6 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"/>
 <title>さばえものづくり博覧会</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    overflow-x: hidden;
-  }
-  #header, #footer {
-    width: 100vw;
-  }
-  #main > div {
-    margin: 1.5em 3em;
-  }
-  #main > div > h3::before, #main > div > h3::after {
-    border-top: 1px solid #444;
-    display: inline-block;
-    position: relative;
-    top: -.3em;
-    margin-right: 1em;
-    margin-left: 1em;
-    content: "";
-    width: 3em;
-  }
-  #tags > a {
-    background-color: #f1f1f1;
-    padding: .1em .3em;
-    margin: .5em;
-    line-height: 1.8em;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  #div_search {
-    line-height: 2em;
-  }
-  #div_search_box {
-    vertical-align: top;
-  }
-  #input_search {
-    border: 1px solid black;
-    font-size: 120%;
-  }
-  #btn_search {
-    width: 2.5em;
-    height: 2em;
-    background-image: url("btn_search.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    border: none;
-    position: relative;
-    top: .4em;
-    margin-left: 1em;
-  }
-  </style>
   <script type="module">
     import util from "https://taisukef.github.io/util/util.mjs";
 
@@ -110,12 +55,24 @@
       input_search.onkeyup = btn_search.onclick = () => show();
     };
   </script>
+<link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 <body>
-  <img id="header" src="header.png">
-
+  <a name="top"></a>
+  <div id="header">
+    <a href="#greeting"><img id="btn_greeting" src="img/topaisatsu.svg"></a>
+    <img id="main_logo" src="img/main.svg">
+    <ul id="main_menu">
+      <li><a href="#greeting">ABOUT</a></li>
+      <li><a href="#member">MEMBER</a></li>
+      <li><a href="#information">INFORMATION</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><a href=https://www.facebook.com/sabaemonohaku><img src="img/fb_icon_w.svg"></a></li>
+    </ul>
+  </div>
   <div>さばえものづくり博覧会がオープンデータに！<br>
-    ものづくりの魅力に触れ、鯖江のこれからを共に創ろう！</div>
+    ものづくりの魅力に触れ、鯖江のこれからを共に創ろう！
+  </div>
   
   <div id="div_search">
     <div id="div_search_box">
@@ -124,6 +81,7 @@
     <div>&gt; <a href="https://push.sabae.cc/524">オープンデータについて</a></div>
   </div>
   
+  <a name="member"></a>
   <div id="main">
     <div>
       <h3>一覧</h3>
@@ -135,6 +93,7 @@
       <div id="tags"></div>
     </div>
 
+    <a name="information"></a>
     <div>
       <h3>新着情報</h3>
       <div id="news"></div>
@@ -146,6 +105,7 @@
     </div>
 
     <div>
+      <a name="greeting"></a>
       <h3>ご挨拶</h3>
       <div style="white-space: pre-wrap">
         2020年のものづくり博覧会は新型コロナウイルスの影響を鑑みて、
@@ -160,8 +120,15 @@
         どうぞよろしくお願いします。
       </div>
     </div>
-  </di>
+  </div>
 
-  <img id="footer" src="footer.png">
+  <a name="contact"></a>
+  <div id="footer">
+    <a href="#top"><img id="btn_pagetop" src="img/pagetop.svg"></a>
+    <img id="footer_logo" src="img/logo_w.svg">
+    <div><a href="https://github.com/code4sabae/sabae-monohaku.jp/issues">主催：さばえものづくり博覧会 実行委員会</a></div>
+    <a id="footer_fb" href=https://www.facebook.com/sabaemonohaku><img src="img/fb_icon_w.svg"></a>
+    <div><a href="https://github.com/code4sabae/sabae-monohaku.jp/">CC BY sabae monohaku (src on GitHub)</a></div>
+  </div>
 </body>
 </html>
