@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width">
 <title>さばえものづくり博覧会</title>
-  <script type="module">
+<script type="module">
     import util from "https://taisukef.github.io/util/util.mjs";
 
     window.onload = async () => {
@@ -56,7 +57,8 @@
     };
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-<link rel='stylesheet' type='text/css' href='style.css'>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="module" src="./footer.mjs"></script>
 </head>
 <body>
   <a name="top"></a>
@@ -71,7 +73,8 @@
       <li><a href=https://www.facebook.com/sabaemonohaku><img src="img/fb_icon_w.svg"></a></li>
     </ul>
   </div>
-  <div>さばえものづくり博覧会がオープンデータに！<br>
+  <div>
+    さばえものづくり博覧会がオープンデータに！<br>
     ものづくりの魅力に触れ、鯖江のこれからを共に創ろう！
   </div>
   
@@ -97,39 +100,35 @@
     <a name="information"></a>
     <div>
       <h3>新着情報</h3>
-      <div id="news"></div>
+      <div id="news">
+        <a href="https://github.com/code4sabae/sabae-monohaku.jp/" target=_blank>2020-08-12 GitHubにてWebサイト公開</a>
+      </div>
     </div>
-
+    <!--
     <div>
       <h3>新着画像</h3>
       <div id="news"></div>
     </div>
-
+    -->
     <div>
       <a name="greeting"></a>
       <h3>ご挨拶</h3>
-      <div style="white-space: pre-wrap">
-        2020年のものづくり博覧会は新型コロナウイルスの影響を鑑みて、
-        嚮陽会館で予定しておりました博覧会は中止とさせていただきました。
-        そして規模を縮小して、ウェブサイトでのみの開催とさせて頂きました。
-        皆様のご期待に添えない形での開催をご了承ください。
-        そのような中で私たちが鯖江の産業や事業者さん達のために
-        何が出来るのだろうと考えました。
-        さばえものづくり博覧会2020はこのウェブサイトをオープンデータ化し
-        皆さんのプラットフォームとして機能し、そして色んな方に活用、
-        参加していただける新しい形での開催をさせていただきます。
+      <div>
+        2020年のものづくり博覧会は新型コロナウイルスの影響を鑑みて、<br>
+        嚮陽会館で予定しておりました博覧会は中止とさせていただきました。<br>
+        そして規模を縮小して、ウェブサイトでのみの開催とさせて頂きました。<br>
+        皆様のご期待に添えない形での開催をご了承ください。<br>
+        そのような中で私たちが鯖江の産業や事業者さん達のために<br>
+        何が出来るのだろうと考えました。<br>
+        さばえものづくり博覧会2020はこのウェブサイトをオープンデータ化し<br>
+        皆さんのプラットフォームとして機能し、そして色んな方に活用、<br>
+        参加していただける新しい形での開催をさせていただきます。<br>
         どうぞよろしくお願いします。
       </div>
     </div>
   </div>
 
-  <a name="contact"></a>
-  <div id="footer">
-    <a href="#top"><img id="btn_pagetop" src="img/pagetop.svg"></a>
-    <img id="footer_logo" src="img/logo_w.svg">
-    <div><a href="https://github.com/code4sabae/sabae-monohaku.jp/issues">主催：さばえものづくり博覧会 実行委員会</a></div>
-    <a id="footer_fb" href=https://www.facebook.com/sabaemonohaku><img src="img/fb_icon_w.svg"></a>
-    <div><a href="https://github.com/code4sabae/sabae-monohaku.jp/">CC BY sabae monohaku (src on GitHub)</a></div>
-  </div>
+  <smono-footer></smono-footer>
+
 </body>
 </html>

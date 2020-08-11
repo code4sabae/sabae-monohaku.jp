@@ -78,6 +78,9 @@ body {
 #footer a {
   color: white !important;
 }
+#footer_sporsor {
+  font-family: sans-serif;
+}
 #btn_pagetop {
   position: absolute;
   right: 1em;
@@ -86,7 +89,8 @@ body {
 
 /* main */
 #main > div {
-  margin: 1.5em 3em;
+  margin: 1.5em 2em;
+  font-size: 95%;
 }
 #main > div > h3::before, #main > div > h3::after {
   border-top: 1px solid #444;
@@ -128,4 +132,57 @@ a {
   position: relative;
   top: .4em;
   margin-left: 1em;
+}
+/* detail */
+.detail_header {
+  height: 30vw !important;
+  max-height: 300px !important;
+}
+#detail > div {
+  margin: 3em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#detail_img {
+  width: 80vw;
+}
+#detail_text {
+  text-align: left;
+  white-space: pre-wrap;
+}
+#company {
+  text-align: left;
+  width: auto;
+  padding: 2em;
+  background-color: #f1f1f1;
+}
+#info {
+  border-bottom: 1px solid #333;
+}
+#info_access::before {
+  content: "ACCESS";
+  width: 7em;
+  display: inline-block;
+}
+#info_url::before {
+  content: "URL";
+  width: 7em;
+  display: inline-block;
+}
+#info_sdgs::before {
+  content: "SDGs";
+  width: 7em;
+  display: inline-block;
+}
+#info_type::before {
+  content: "TYPE";
+  width: 7em;
+  display: inline-block;
+}
+#info_rest::before {
+  content: "REST";
+  width: 7em;
+  display: inline-block;
 }
