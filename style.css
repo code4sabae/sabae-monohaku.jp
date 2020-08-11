@@ -44,9 +44,7 @@ body {
   x-font-family: 'Ubuntu Condensed', sans-serif;
   font-weight: 600;
   letter-spacing: 0.1em;
-  x-font-size: 110%;
-  font-size: calc(min(4vw, 40px));
-  x-font-size: 40px;
+  font-size: calc(min(3.5vw, 30px));
 }
 #main_menu > li {
   display: inline-block;
