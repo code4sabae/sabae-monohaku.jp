@@ -6,6 +6,7 @@ body {
   padding: 0;
   text-align: center;
   overflow-x: hidden;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 #header {
   background-image: url("img/main_bg.png");
@@ -28,10 +29,10 @@ body {
 }
 @keyframes fuwafuwa {
   0% {
-      transform: translate(0,0px);
+    transform: translate(0, 0px);
   }
   100% {
-      transform: translate(0,-15px)
+    transform: translate(0, -15px)
   }
 }
 #main_logo {
@@ -40,11 +41,12 @@ body {
 }
 #main_menu {
   margin: 0;
+  padding: 0;
   font-family: 'Open Sans Condensed', sans-serif;
   x-font-family: 'Ubuntu Condensed', sans-serif;
   font-weight: 600;
   letter-spacing: 0.1em;
-  font-size: calc(min(3.5vw, 30px));
+  font-size: calc(min(3.5vw, 1.3em));
 }
 #main_menu > li {
   display: inline-block;
@@ -61,7 +63,7 @@ body {
 }
 /* footer */
 #footer {
-  background-color: #55B4CA;
+  background-color: #18B7CD;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-top: 1em;
   padding-top: 1.5em;
@@ -84,7 +86,7 @@ body {
 #btn_pagetop {
   position: absolute;
   right: 1em;
-  width: 8vw;
+  width: 6vw;
 }
 
 /* main */
@@ -103,7 +105,7 @@ body {
   width: 3em;
 }
 #tags > a {
-  background-color: #f1f1f1;
+  background-color: #f4f4f4;
   padding: .1em .3em;
   margin: .5em;
   line-height: 1.8em;
