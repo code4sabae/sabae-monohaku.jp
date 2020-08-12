@@ -13,14 +13,16 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position-y: 100%;
-  height: 40vw;
-  max-height: 400px;
+  height: 39vw;
+  max-height: 360px;
 }
 #btn_greeting {
   position: absolute;
   right: .5em;
   top: 15vw;
   width: 10vw;
+}
+.fuwafuwa {
   animation-name: fuwafuwa;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
