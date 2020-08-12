@@ -31,10 +31,10 @@ body {
 }
 @keyframes fuwafuwa {
   0% {
-    transform: translate(0, 0px);
+    transform: translate(0, 0vw);
   }
   100% {
-    transform: translate(0, -15px)
+    transform: translate(0, 2vw)
   }
 }
 #main_logo {
