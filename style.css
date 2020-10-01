@@ -107,7 +107,7 @@ body {
 
 /* main */
 #main > div {
-  margin: 4em 4em;
+  margin: 2em 2em;
   font-size: 95%;
 }
 #main > div > h3::before, #main > div > h3::after {
