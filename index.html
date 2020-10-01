@@ -117,7 +117,8 @@
       const lls = [];
       data.filter((d) => d.緯度 && d.経度).forEach((d) => {
         const ll = [ d.緯度, d.経度 ];
-        const marker = L.circleMarker(ll, { title: d.事業所名, fillColor: "#48A0BE", stroke: false, radius: 8, fillOpacity: 1 });
+        const fillColor = d.業種.indexOf("料飲") >= 0 ? "#BB4459" : (d.業種.indexOf("眼鏡") >= 0 ? "#48A0BE" : "#BBC459");
+        const marker = L.circleMarker(ll, { title: d.事業所名, fillColor, stroke: false, radius: 8, fillOpacity: 1 });
         marker.bindPopup(`<a href=detail.html#${d.id}>${d.事業所名}</a><br>${d.業種}</a>`);
         iconlayer.addLayer(marker);
         lls.push(ll);
