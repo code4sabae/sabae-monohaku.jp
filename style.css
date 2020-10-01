@@ -79,7 +79,7 @@ body {
 #footer {
   background-color: #18B7CD;
   font-family: 'Open Sans Condensed', sans-serif;
-  margin-top: 1em;
+  x-margin-top: 1em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   color: white;
@@ -152,6 +152,9 @@ a {
 }
 #divmap {
   height: 25vw;
+}
+#amap {
+  font-size: 80%;
 }
 #info {
   display: inline-block;
