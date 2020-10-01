@@ -74,6 +74,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center center;
+  margin: 10px;
 }
 /* footer */
 #footer {
