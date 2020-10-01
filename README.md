@@ -1,5 +1,5 @@
 # さばえものづくり博覧会 webサイト
-https://code4sabae.github.io/sabae-monohaku.jp/  
+http://sabae-monohaku.jp/  
 
 # 参考情報
 さばえものづくり博覧会OPENDATA  
