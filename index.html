@@ -2,15 +2,39 @@
 <html><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width">
 <title>さばえものづくり博覧会</title>
+<link rel='stylesheet' href='https://code4sabae.github.io/leaflet-mjs/leaflet.css'/>
 <script type="module">
     import util from "https://taisukef.github.io/util/util.mjs";
+    import L from 'https://code4sabae.github.io/leaflet-mjs/leaflet.mjs'
 
     window.onload = async () => {
       const url = "https://push.sabae.cc/524.csv";
       const data = await util.fetchCSVtoJSON(url);
+      
+      // 新しいものを先
+      data.sort((a, b) => {
+        const ta = new Date(a.lastUpdate).getTime();
+        const tb = new Date(b.lastUpdate).getTime();
+        return tb - ta;
+      });
 
+      const enc = s => {
+        s = s.replace(/&/g, '&amp;');
+        s = s.replace(/</g, '&lt;');
+        s = s.replace(/>/g, '&gt;');
+        return s;
+      };
+
+      const itemsToHTML = (items) => {
+        return items.map(d => `<a href=detail.html#${enc(d.id)}>${enc(d.事業所名)}</a>`).join(" / ");
+      };
+      
       const show = () => {
         const key = input_search.value;
+        if (key.length === 0) {
+          all.innerHTML = "";
+          return;
+        }
         const items = data.filter(d => {
           for (const c in d) {
             const val = d[c];
@@ -20,16 +44,9 @@
           }
           return false;
         });
-
-        const enc = s => {
-          s = s.replace(/&/g, '&amp;');
-          s = s.replace(/</g, '&lt;');
-          s = s.replace(/>/g, '&gt;');
-          return s;
-        };
-        all.innerHTML = items.map(d => `<a href=detail.html#${enc(d.id)}>${enc(d.事業所名)}</a>`).join(" / ");
+        all.innerHTML = itemsToHTML(items);
       };
-      show();
+      //show();
       
       // const getUniqueArray = (arr, funcGetKey) => [...new Map(arr.map(v => [funcGetKey(v), v])).values()];
       /// const types = [...new Map(data.map(v => [v.業種, v])).values()];
@@ -37,7 +54,8 @@
       const typeset = new Set();
       for (const n of data) {
         const t = n.業種;
-        const t2 = util.splitString(t, "　、");
+        // const t2 = util.splitString(t, "　、");
+        const t2 = t.split(",").filter((t) => t.length > 0);
         t2.forEach(d => typeset.add(d.trim()));
       }
       const types = Array.from(typeset.values());
@@ -48,12 +66,68 @@
         const a = document.createElement("a");
         a.textContent = type;
         a.onclick = function() {
-          input_search.value = this.textContent;
-          show();
+          //input_search.value = this.textContent;
+          //show();
+          const items = data.filter(d => d.業種 === this.textContent);
+          alltags.innerHTML = itemsToHTML(items);
         };
         tags.appendChild(a);
       });
       input_search.onkeyup = btn_search.onclick = () => show();
+
+      // 新着
+      const anews = [];
+      const formatDate = (d) => {
+        return "<span class=date>" + d.substring(0, d.indexOf("T")).replace(/-/g, ".") + "</span>";
+      }
+      for (let i = 0; i < Math.min(data.length, 5); i++) {
+        const d = data[i];
+        anews.push(`<a href=detail.html#${d.id}>${formatDate(d.lastUpdate)} ${d.事業所名} さんが、企業情報を更新しました。</a>`);
+      }
+      //console.log(anews);
+      divnews.innerHTML = anews.join("<br>");
+
+      // 新着画像
+      const anewsimg = [];
+      for (let i = 0; i < data.length; i++) {
+        const d = data[i];
+        let imgs = [d.写真URL1, d.写真URL2, d.写真URL3].filter((i) => i != null && i.length > 0);
+        if (imgs.length > 0) {
+          anewsimg.push(`<a href=detail.html#${d.id}><div style="background-image:url(${imgs[0]})"></div></a>`);
+          if (anewsimg.length === 5)
+            break;
+        }
+      }
+      //console.log(anews);
+      divnewsimg.innerHTML = anewsimg.join("");
+
+      // map
+      const map = L.map('divmap');
+      // set 国土地理院地図 https://maps.gsi.go.jp/development/ichiran.html
+      L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png", {
+        attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>"',
+        //maxZoom: 18,
+        center: [35.94363, 136.188992],
+        //zoom: 15,
+      }).addTo(map);
+      map.setView([35.961, 136.228], 12);
+      
+      let iconlayer = L.layerGroup();
+      iconlayer.addTo(map);
+      const lls = [];
+      data.filter((d) => d.緯度 && d.経度).forEach((d) => {
+        const ll = [ d.緯度, d.経度 ];
+        const marker = L.circleMarker(ll, { title: d.事業所名, fillColor: "#48A0BE", stroke: false, radius: 8, fillOpacity: 1 });
+        marker.bindPopup(`<a href=detail.html#${d.id}>${d.事業所名}</a><br>${d.業種}</a>`);
+        iconlayer.addLayer(marker);
+        lls.push(ll);
+      });
+      
+      /*
+      if (lls.length) {
+        map.fitBounds(lls);
+      }
+      */
     };
   </script>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
@@ -84,27 +158,43 @@
     <input type="text" id="input_search"><button id="btn_search"></button>
     </div>
     <div>&gt; <a href="https://push.sabae.cc/524">オープンデータについて</a></div>
-  </div>
+    <div id="all"></div>
+</div>
   
+  <div id="divmap"></div>
+
   <a name="member"></a>
   <div id="main">
     <div>
-      <h3>一覧</h3>
-      <div id="all"></div>
-    </div>
-
-    <div>
       <h3>タグから探す</h3>
       <div id="tags"></div>
+      <br>
+      <div id="alltags"></div>
+    </div>
+
+    <a name="news"></a>
+    <div>
+      <h3>新着情報</h3>
+      <div id="divnews">
+      </div>
+    </div>
+
+    <a name="newimg"></a>
+    <div>
+      <h3>新着画像</h3>
+      <div id="divnewsimg">
+      </div>
     </div>
 
     <a name="information"></a>
     <div>
-      <h3>新着情報</h3>
-      <div id="news">
-        <a href="https://github.com/code4sabae/sabae-monohaku.jp/" target=_blank>2020-08-12 GitHubにてWebサイト公開</a>
+      <h3>INFORMATION</h3>
+      <div id="info">
+        <a href="https://github.com/code4sabae/sabae-monohaku.jp/">2020-08-12 GitHubにてWebサイト公開</a>
       </div>
     </div>
+
+    
     <!--
     <div>
       <h3>新着画像</h3>

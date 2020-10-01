@@ -63,6 +63,18 @@ body {
 #header a {
   color: white !important;
 }
+#divnews {
+  text-align: left;
+  display: inline-block;
+}
+#divnewsimg div {
+  display: inline-block;
+  width: 17vw;
+  height: 12vw;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+}
 /* footer */
 #footer {
   background-color: #18B7CD;
@@ -71,6 +83,7 @@ body {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   color: white;
+  x-border-top: 1px solid #333;
 }
 #footer_logo {
   margin: 1em;
@@ -137,6 +150,10 @@ a {
   top: .4em;
   margin-left: 1em;
 }
+#divmap {
+  height: 25vw;
+}
+
 /* detail */
 .detail_header {
   height: 30vw !important;
@@ -156,6 +173,10 @@ a {
   text-align: left;
   white-space: pre-wrap;
 }
+#detail_img img {
+  width: 24vw;
+  padding: 0 .5vw;
+}
 #company {
   text-align: left;
   width: auto;
@@ -163,7 +184,6 @@ a {
   background-color: #f1f1f1;
 }
 #info {
-  border-bottom: 1px solid #333;
 }
 #info_access::before {
   content: "ACCESS";

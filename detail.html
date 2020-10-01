@@ -4,6 +4,7 @@
 <title>さばえものづくり博覧会</title>
 <script type="module">
 import util from "https://taisukef.github.io/util/util.mjs";
+import {} from "https://code4sabae.github.io/leaflet-mjs/map-gsi.mjs";
 
 window.onload = async () => {
   if (document.location.hash.length < 1)
@@ -28,6 +29,19 @@ window.onload = async () => {
   info_sdgs.textContent = d.SDGs;
   info_rest.textContent = d.定休日;
   info_type.textContent = d.業種;
+
+  // image
+  let imgs = [d.写真URL1, d.写真URL2, d.写真URL3].filter((i) => i != null && i.length > 0);
+  const himgs = [];
+  imgs.forEach((img) => {
+    himgs.push(`<img src=${img}>`);
+  });
+  detail_img.innerHTML = himgs.join("");
+
+  // map
+  if (d.緯度 && d.経度) {
+    map.innerHTML = `<map-gsi><map-gsi-icon ll="${d.緯度},${d.経度}" name="${d.事業所名}"></map-gsi-icon></map-gsi>→ <a href=http://maps.google.co.jp/?ll=${d.緯度},${d.経度}>Googleマップで開く</a>`;
+  }
 };
 </script>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
@@ -45,7 +59,9 @@ window.onload = async () => {
     <div>
       <h3 id=detail_title></h3>
     </div>
-    <!--<img id=detail_img src="img/img_detail_test.jpg">-->
+    <div id=detail_img>
+      <!--<img id=detail_img src="img/img_detail_test.jpg">-->
+    </div>
     <div id=detail_text>
     </div>
 
@@ -60,7 +76,11 @@ window.onload = async () => {
       <div id=info_rest></div>
       <div id=info_type></div>
     </div>
+
+    <div id=map></div>
+
   </div>
+
 
   <smono-footer></smono-footer>
 </body>
