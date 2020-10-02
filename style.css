@@ -154,6 +154,11 @@ a {
 #divmap {
   height: 25vw;
 }
+@media screen and (max-width: 768px) {
+#divmap {
+    height: 60vw;
+}
+}
 #amap {
   font-size: 80%;
 }
