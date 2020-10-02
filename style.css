@@ -157,6 +157,13 @@ a {
 #amap {
   font-size: 80%;
 }
+#vf div {
+  display: inline-block;
+}
+#vf iframe {
+  width: 25vw;
+  height: 15vw;
+}
 #info {
   display: inline-block;
   text-align: left;
