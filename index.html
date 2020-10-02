@@ -10,7 +10,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width">
 <title>さばえものづくり博覧会</title>
-<link rel='stylesheet' href='https://code4sabae.github.io/leaflet-mjs/leaflet.css'/>
+<link rel="stylesheet" href="https://code4sabae.github.io/leaflet-mjs/leaflet.css"/>
+
 <script type="module">
     import util from "https://taisukef.github.io/util/util.mjs";
     import { showMap } from "./showMap.js";
@@ -114,23 +115,85 @@
     };
   </script>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Ubuntu+Condensed&display=swap" rel="stylesheet">
+    
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/css/import.css">
+<link rel="stylesheet" href="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/css/top.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- iScroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<!-- drawer.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+<script type="text/javascript" src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/js/common.js" ></script>
 <script type="module" src="./footer.js"></script>
+    
+ <!-- ドロワーメニューの利用宣言 -->
+  <script>
+    $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+  </script>
 </head>
-<body>
+<body id="od_top" class="drawer drawer--top">
   <a name="top"></a>
-  <div id="header">
-    <a href="#greeting"><img id="btn_greeting" class="fuwafuwa" src="img/topaisatsu.svg"></a>
-    <img id="main_logo" src="img/main.svg">
-    <ul id="main_menu">
-      <li><a href="#greeting">ABOUT</a></li>
-      <li><a href="#member">MEMBER</a></li>
-      <li><a href="#information">INFORMATION</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-      <li><a href=https://www.facebook.com/sabaemonohaku target="_blank"><img src="img/fb_icon_w.svg"></a></li>
-    </ul>
-  </div>
+    
+<header>
+		
+	<!-- グローバルナビゲーション -->
+<section class="g_navi site-header">
+	<div class="inner">
+        
+    <ul class="flexCover g_navi_wrap">
+        <li>
+            <h1><a href="https://sabae-monohaku.jp" rel="home"><img src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/images/logo_w.svg" alt="さばえものづくり博覧会"/></a>
+            <span><img src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/images/opendata.svg" alt="OPEN DATA"/></span>
+            </h1>
+        </li>
+        <li>
+    <nav>
+		<ul class="flexCover navigation fAbc">
+        <li><a href="https://sabae-monohaku.jpn.org/about/">ABOUT</a></li>
+        <li><a href="https://sabae-monohaku.jp/#member">MEMBER</a></li>
+        <li><a href="https://sabae-monohaku.jp/#information">INFORMATION</a></li>
+        <li><a href="https://sabae-monohaku.jpn.org/contact/">CONTACT</a></li>
+        <li><a href="https://www.facebook.com/sabaemonohaku/" target="_blank"><img src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/images/fb_icon_w.svg" alt="さばえものづくり博覧会Facebook"/></a></li>
+        </ul>
+	</nav>
+        </li>
+        
+	</ul>
+
+	</div>
+</section>
+
+	<!-- ハンバーガーボタン -->
+	<button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+
+	
+	 <!--ナビゲーションの中身 -->
+    <nav class="drawer-nav" role="navigation">
+        
+        <div class="logo_wrap"><h1><a href="https://sabae-monohaku.jp" rel="home"><img class="logo" src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/images/logo.svg" alt="さばえものづくり博覧会"/></a></h1></div>
+
+      <ul class="navigation fAbc">
+        <li><a href="https://sabae-monohaku.jpn.org/about/">ABOUT</a></li>
+        <li><a href="https://sabae-monohaku.jp/#member">MEMBER</a></li>
+        <li><a href="https://sabae-monohaku.jp/#information">INFORMATION</a></li>
+        <li><a href="https://sabae-monohaku.jpn.org/contact/">CONTACT</a></li>
+        <li><a href="https://www.facebook.com/sabaemonohaku/" target="_blank"><img src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/images/fb_icon.svg" alt="さばえものづくり博覧会Facebook"/></a></li>
+     </ul>
+        
+        <div class="copyright fAbc">ⓒ sabae monohaku all right reserved.</div>
+		
+    </nav>
+</header>
+    
+    
   <div>
     さばえものづくり博覧会がオープンデータに！<br>
     ものづくりの魅力に触れ、鯖江のこれからを共に創ろう！
@@ -157,7 +220,7 @@
     <div>
       <h3>地図から探す</h3>
       <div id="divmap"></div>
-      <div id="amap">→<a href=map.html>マップを大きくみる</a></div>
+      <div id="amap">→<a href="map.html">マップを大きくみる</a></div>
     </div>
 <!--
     <div>
@@ -178,6 +241,167 @@
       </div>
     </div>
   -->
+      
+    
+<!-- バーチャルファクトリーツーリズム -->
+<section id="vft">
+    <div class="inner">
+        
+        <h3>特別映像</h3>
+        
+        <div class="img_wrap">
+        <img src="img/vft_img.svg" alt="バーチャルファクトリーツーリズム">
+		</div>
+		
+        <ul class="flexCover vft_list">
+		<li><a id="modal_trigger_1"><img src="img/vft_img01.jpg" alt="漆器編"></a></li>
+        <li><a id="modal_trigger_2"><img src="img/vft_img02.jpg" alt="繊維編"></a></li>
+        <li><a id="modal_trigger_3"><img src="img/vft_img03.jpg" alt="メガネ編"></a></li>
+        </ul>
+        
+    </div>
+</section>
+      
+      
+<!-- アーカイブ -->
+<section id="archives">
+    <div class="inner">
+        
+        <div class="txt_wrap">
+        2019年度のサイトはこちらから
+		</div>
+		
+        <ul class="flexCover archives_list">
+		<li><a id="modal_trigger_4" class="btn fAbc">2019-ARCHIVE</a></li>
+        <li><a class="btn fAbc" href="<?php echo home_url() ?>/photo2019/" target="_blank">2019-PHOTO</a></li>
+        <li><a class="btn fAbc" href="<?php echo home_url() ?>/2019/" target="_blank">2019-ARCHIVE</a></li>
+        </ul>
+        
+    </div>
+</section>
+      
+    
+<div class="l-modal">
+<div id="modal_target_1" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_1"></div>
+<div id="modal_item_1" class="player"></div>
+</div>
+</div>
+    
+<div id="modal_target_2" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_2"></div>
+<div id="modal_item_2" class="player"></div>
+</div>
+</div>
+    
+<div id="modal_target_3" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_3"></div>
+<div id="modal_item_3" class="player"></div>
+</div>
+</div>
+    
+<div id="modal_target_4" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_4"></div>
+<div id="modal_item_4" class="player"></div>
+</div>
+</div>
+
+<div id="modal-overlay"></div>
+</div>
+    
+    
+<script type="text/javascript">
+// IFrame Player API の読み込み
+var scriptTag = document.createElement('script');
+scriptTag.src = "https://www.youtube.com/iframe_api";
+var fsTag = document.getElementsByTagName('script')[0];
+fsTag.parentNode.insertBefore(scriptTag, fsTag);
+    
+    
+let ytModalPlayer = [];
+	let ytData = [
+{
+    id: 'eS5Pb0jhiPs',
+    area: 'modal_item_1',
+    target: '#modal_target_1',
+    trigger: '#modal_trigger_1',
+    close: '#movie_close_1'
+}, 
+{
+    id: '2XzO5_swjYA',
+    area: 'modal_item_2',
+    target: '#modal_target_2',
+    trigger: '#modal_trigger_2',
+    close: '#movie_close_2'
+}, 
+{
+    id: 'WiM35isZg-4',
+    area: 'modal_item_3',
+    target: '#modal_target_3',
+    trigger: '#modal_trigger_3',
+    close: '#movie_close_3'
+}, 
+{
+    id: 'aCqilxJZyMU',
+    area: 'modal_item_4',
+    target: '#modal_target_4',
+    trigger: '#modal_trigger_4',
+    close: '#movie_close_4'
+}
+]
+
+let $modal = $('.l-modal');
+    
+function onYouTubeIframeAPIReadyModal() {
+    //配列をループ
+    for (let i = 0; i < ytData.length; i++) {
+
+        ytModalPlayer[i] = new YT.Player(
+            ytData[i]['area'],  //youtube表示する場所
+            {
+                width:'560',
+                height:'315',
+                videoId: ytData[i]['id'], //youtubeのID
+                playerVars: {
+                    rel: 0,
+                    loop: 0, 
+                    playlist: ytData[i]['id'], //youtubeのID
+                    showinfo: 0, // 動画情報を表示しない
+                    modestbranding: 1,
+                }
+            });
+
+        //モーダルの表示非表示
+        $(ytData[i]['trigger']).on('click', ()=> {
+            $modal.fadeIn();
+            $(ytData[i]['target']).addClass('is-show');
+            ytModalPlayer[i].playVideo();
+        });
+
+        $(ytData[i]['close']).on('click', ()=> {
+            $modal.fadeOut();
+            $(ytData[i]['target']).removeClass('is-show');
+            ytModalPlayer[i].pauseVideo();
+        });
+        
+        $('#modal-overlay').on('click', ()=> {
+            $modal.fadeOut();
+            $(ytData[i]['target']).removeClass('is-show');
+            ytModalPlayer[i].pauseVideo();
+        });
+
+    }
+}
+
+window.addEventListener('load', ()=> {
+    onYouTubeIframeAPIReadyModal();
+});
+</script>
+      
     <a name="news"></a>
     <div>
       <h3>新着情報</h3>
