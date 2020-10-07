@@ -35,7 +35,7 @@ const showMap = (data) => {
   }).addTo(map);
   map.setView([35.961, 136.228], 12);
   
-  let iconlayer = L.layerGroup();
+  const iconlayer = L.layerGroup();
   iconlayer.addTo(map);
   const lls = [];
   data.filter((d) => d.緯度 && d.経度).forEach((d) => {
@@ -63,6 +63,7 @@ const showMap = (data) => {
     map.fitBounds(lls);
   }
   */
+  return map;
 };
 
 export { showMap };
