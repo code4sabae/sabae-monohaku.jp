@@ -1,0 +1,226 @@
+<!DOCTYPE html><html><head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179068877-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-179068877-2');
+</script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width">
+<title>バーチャルファクトリーツーリズム - さばえものづくり博覧会</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Ubuntu+Condensed&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/css/import.css">
+<link rel="stylesheet" href="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/css/top.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- iScroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<!-- drawer.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+<script type="text/javascript" src="https://sabae-monohaku.jpn.org/wp/wp-content/themes/sabae-monohaku/js/common.js" ></script>
+<script type="module" src="./footer.js"></script>
+    
+</head>
+<body id="od_top" class="drawer drawer--top">
+  <a id="top"></a>
+
+<!-- バーチャルファクトリーツーリズム -->
+<section id="vft" style="padding-top:80px">
+    <div class="inner">
+        <!--
+        <h3><img src="img/vft_ttl.svg" alt="特別映像"></h3>
+        -->
+        
+        <div class="img_wrap">
+        <img src="img/vft_img.svg" alt="バーチャルファクトリーツーリズム">
+		</div>
+		
+        <ul class="flexCover vft_list">
+	<li><a id="modal_trigger_1"><img src="img/vft_img01.png" alt="漆器編"></a></li>
+        <li><a id="modal_trigger_2"><img src="img/vft_img02.png" alt="繊維編"></a></li>
+        <li><a id="modal_trigger_3"><img src="img/vft_img03.png" alt="メガネ編"></a></li>
+	<li><a id="modal_trigger_5"><img src="img/vft_img04.png" alt="漆器編JK課カット版"></a></li>
+        <li><a id="modal_trigger_6"><img src="img/vft_img05.png" alt="繊維編JK課カット版"></a></li>
+        <li><a id="modal_trigger_7"><img src="img/vft_img06.png" alt="メガネ編JK課カット版"></a></li>
+        </ul>
+        
+    </div>
+</section>
+      
+    
+<div class="l-modal">
+<div id="modal_target_1" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_1"></div>
+<div id="modal_item_1" class="player"></div>
+</div>
+</div>
+    
+<div id="modal_target_2" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_2"></div>
+<div id="modal_item_2" class="player"></div>
+</div>
+</div>
+    
+<div id="modal_target_3" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_3"></div>
+<div id="modal_item_3" class="player"></div>
+</div>
+</div>
+    
+<div id="modal_target_4" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_4"></div>
+<div id="modal_item_4" class="player"></div>
+</div>
+</div>
+	
+<div id="modal_target_5" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_5"></div>
+<div id="modal_item_5" class="player"></div>
+</div>
+</div>
+	
+<div id="modal_target_6" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_6"></div>
+<div id="modal_item_6" class="player"></div>
+</div>
+</div>
+	
+<div id="modal_target_7" class="modal_content">
+<div class="modal_inner">
+<div class="movie_close" id="movie_close_7"></div>
+<div id="modal_item_7" class="player"></div>
+</div>
+</div>
+
+<div id="modal-overlay"></div>
+</div>
+    
+    
+<script type="text/javascript">
+// IFrame Player API の読み込み
+var scriptTag = document.createElement('script');
+scriptTag.src = "https://www.youtube.com/iframe_api";
+var fsTag = document.getElementsByTagName('script')[0];
+fsTag.parentNode.insertBefore(scriptTag, fsTag);
+    
+    
+let ytModalPlayer = [];
+	let ytData = [
+{
+    id: 'eS5Pb0jhiPs',
+    area: 'modal_item_1',
+    target: '#modal_target_1',
+    trigger: '#modal_trigger_1',
+    close: '#movie_close_1'
+}, 
+{
+    id: '2XzO5_swjYA',
+    area: 'modal_item_2',
+    target: '#modal_target_2',
+    trigger: '#modal_trigger_2',
+    close: '#movie_close_2'
+}, 
+{
+    id: 'WiM35isZg-4',
+    area: 'modal_item_3',
+    target: '#modal_target_3',
+    trigger: '#modal_trigger_3',
+    close: '#movie_close_3'
+}, 
+{
+    id: 'aCqilxJZyMU',
+    area: 'modal_item_4',
+    target: '#modal_target_4',
+    trigger: '#modal_trigger_4',
+    close: '#movie_close_4'
+}, 
+{
+    id: 'GC7gezifkBo',
+    area: 'modal_item_5',
+    target: '#modal_target_5',
+    trigger: '#modal_trigger_5',
+    close: '#movie_close_5'
+}, 
+{
+    id: 'Qd2FUb6sXLo',
+    area: 'modal_item_6',
+    target: '#modal_target_6',
+    trigger: '#modal_trigger_6',
+    close: '#movie_close_6'
+}, 
+{
+    id: 'VL6Pqe3GXgM',
+    area: 'modal_item_7',
+    target: '#modal_target_7',
+    trigger: '#modal_trigger_7',
+    close: '#movie_close_7'
+}
+]
+
+let $modal = $('.l-modal');
+    
+function onYouTubeIframeAPIReadyModal() {
+    //配列をループ
+    for (let i = 0; i < ytData.length; i++) {
+
+        ytModalPlayer[i] = new YT.Player(
+            ytData[i]['area'],  //youtube表示する場所
+            {
+                width:'560',
+                height:'315',
+                videoId: ytData[i]['id'], //youtubeのID
+                playerVars: {
+                    rel: 0,
+                    loop: 0, 
+                    playlist: ytData[i]['id'], //youtubeのID
+                    showinfo: 0, // 動画情報を表示しない
+                    modestbranding: 1,
+                }
+            });
+
+        //モーダルの表示非表示
+        $(ytData[i]['trigger']).on('click', ()=> {
+            $modal.fadeIn();
+            $(ytData[i]['target']).addClass('is-show');
+            ytModalPlayer[i].playVideo();
+        });
+
+        $(ytData[i]['close']).on('click', ()=> {
+            $modal.fadeOut();
+            $(ytData[i]['target']).removeClass('is-show');
+            ytModalPlayer[i].pauseVideo();
+        });
+        
+        $('#modal-overlay').on('click', ()=> {
+            $modal.fadeOut();
+            $(ytData[i]['target']).removeClass('is-show');
+            ytModalPlayer[i].pauseVideo();
+        });
+
+    }
+}
+
+window.addEventListener('load', ()=> {
+    onYouTubeIframeAPIReadyModal();
+});
+</script>
+      
+
+  <smono-footer></smono-footer>
+	
+</body>
+</html>
