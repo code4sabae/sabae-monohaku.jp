@@ -14,12 +14,14 @@ const icons = {
   "その他": "mapicon_10.png",
 };
 const getIcon = (cate) => {
+  // const base = "img/";
+  const base = "https://sabae-monohaku.jp/img/";
   for (const i in icons) {
     if (cate.indexOf(i) >= 0) {
-      return "img/" + icons[i];
+      return base + icons[i];
     }
   }
-  return "img/mapicon_10.png"; // その他
+  return base + "mapicon_10.png"; // その他
 };
 const showMap = (data) => {
   // map
