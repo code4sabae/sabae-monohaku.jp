@@ -1,5 +1,5 @@
 # さばえものづくり博覧会 webサイト
-httpｓ://sabae-monohaku.jp/  
+https://sabae-monohaku.jp/  
 
 # 参考情報
 さばえものづくり博覧会OPENDATA  
